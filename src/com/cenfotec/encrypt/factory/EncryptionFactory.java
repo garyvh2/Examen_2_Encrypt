@@ -1,6 +1,6 @@
 package com.cenfotec.encrypt.factory;
 
-public class EncryptionManager {
+public class EncryptionFactory {
 	public static Cryptographer<?, ?> Create (Algorithms pType) {
 		switch(pType.getType()) {
 		case ASYMETRIC:

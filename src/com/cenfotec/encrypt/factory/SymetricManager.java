@@ -8,7 +8,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class SymetricManager extends Cryptographer<SecretKeySpec, byte[]> {
 	private final String KEY_EXTENSION = ".key";
-	private final int KEYSIZE = 8;
 
 	public SymetricManager(Algorithms pType) {
 		super(pType);
@@ -51,7 +50,7 @@ public class SymetricManager extends Cryptographer<SecretKeySpec, byte[]> {
 
 	private byte[] generatedSequenceOfBytes() throws Exception {
 		StringBuilder randomkey = new StringBuilder();
-		for (int i = 0; i < KEYSIZE; i++) {
+		for (int i = 0; i < TYPE.getKeySize(); i++) {
 			randomkey.append(Integer.parseInt(Double.toString((Math.random() + 0.1) * 1000).substring(0, 2)));
 		}
 		return randomkey.toString().getBytes("UTF-8");

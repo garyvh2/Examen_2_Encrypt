@@ -1,18 +1,22 @@
 package com.cenfotec.encrypt.factory;
 
 public enum Algorithms {
-	RSA(Encryption.ASYMETRIC),
-	AES(Encryption.SYMETRIC),
-	DES(Encryption.SYMETRIC),
-	ECIESwithAES(Encryption.ASYMETRIC);
+	RSA(Encryption.ASYMETRIC, 0),
+	AES(Encryption.SYMETRIC, 8),
+	DES(Encryption.SYMETRIC, 4);
 	
 	Encryption type;
-	Algorithms (Encryption pType) {
+	int keySize;
+	Algorithms (Encryption pType, int pKeySize) {
 		this.type = pType;
+		this.keySize = pKeySize;
 	}
 	
 	public Encryption getType () {
 		return this.type;
+	}
+	public int getKeySize () {
+		return this.keySize;
 	}
 	
 
