@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import com.cenfotec.encrypt.factory.Algorithms;
-import com.cenfotec.encrypt.factory.AsymetricManager;
 import com.cenfotec.encrypt.factory.Cryptographer;
-import com.cenfotec.encrypt.factory.Encryption;
 import com.cenfotec.encrypt.factory.EncryptionFactory;
 
 public class MainClass {

@@ -33,6 +33,7 @@ public interface FileManager<T> {
 		fos.close();
 	}
 
+	@SuppressWarnings("unchecked")
 	default <F> void WriteObjectFile(String name, String type, F... keys) throws IOException {
 		ObjectOutputStream oout = new ObjectOutputStream(
 			    new BufferedOutputStream(new FileOutputStream(name + type)));
